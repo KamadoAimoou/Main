@@ -1,0 +1,218 @@
+.menu {
+    position: fixed;
+    top: 0;
+    right: -100%; 
+    height: 100%;
+    width: 250px; 
+    background-color: #000;
+    color: snow;
+    transition: 0.6s ease;
+    z-index: 1000;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.menu ul {
+    list-style: none;
+    padding: 50px 0 0; 
+    margin: 0;
+}
+
+.menu li {
+    margin: 20px 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+.menu a:hover {
+    color: seashell;
+}
+
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #e63946;
+}
+
+
+.menu.open {
+    right: 0; 
+}
+
+.open-btn {
+    position: fixed;
+    top: 10px;
+    right: 15px;
+    background-color: transparent;
+    border: none;
+    font-size: 40px;
+    color: black;
+    cursor: pointer;
+    z-index: 1200;
+}
+
+.open-btn:hover {
+    color: rgb(11, 5, 5);
+}
+
+
+.header {
+    display: flex;
+    background-color:
+    padding: 1px 2px;
+}
+
+.brand-logo {
+    font-family: 'Arial Black', Helvetica, sans-serif; 
+    font-weight: bold;
+    text-transform: uppercase;  
+    letter-spacing: 2px; 
+    text-align: center; 
+    padding: 1px; 
+    display: inline-block;
+    position: relative;
+    bottom: 90px;
+    right: 130px;
+    font-size: 30px;
+    
+    
+  }
+  
+  .brand-logo::after {
+    content: '☂'; 
+    font-size: 34px; 
+    margin-left: 5px;
+    vertical-align: middle;
+    position: relative;
+    left:146px;
+    bottom:89px;
+  }
+
+  .all {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    gap: 20px; 
+    padding: 20px; 
+    max-width: 1200px; 
+    margin: 0 auto;
+}
+/* Animation Textt Step-bright */
+.scrolling-text-container {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    top: 80px; 
+    animation: moveText 12s linear infinite;
+    z-index: 800;
+    left: -200px;
+    
+}
+
+.scrolling-text-wrapper {
+    display: flex;
+}
+
+
+.scrolling-text {
+    font-family: 'Arial Black', Helvetica, sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    white-space: nowrap;
+    color: white; 
+    padding-right: 50px;
+    background-color: darkblue;
+    padding: 5px;
+    margin-top: 100px;
+}
+
+
+@keyframes moveText {
+    0% {
+        transform: translateX(100%);
+        
+    }
+ 
+    100% {
+        transform: translateX(-90%);
+       
+    }
+}
+
+/* middle main cloth */
+
+
+
+.product-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: calc(25% - 20px);
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+}
+
+.product-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.product-image:hover {
+    transform: scale(1.05);
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-info h2 {
+    font-size: 1.25rem;
+    color: #333;
+}
+
+.product-info p {
+    font-size: 1rem;
+    color: #666;
+    margin: 10px 0;
+}
+
+.product-info .price {
+    font-size: 1.25rem;
+    color: #009970;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .product-card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card {
+        width: 100%;
+    }
+}
+
+body {
+    overflow-x: hidden;
+}
